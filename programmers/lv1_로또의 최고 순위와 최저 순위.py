@@ -37,6 +37,22 @@ def solution(lottos, win_nums):
     return rankList[1], rankList[0]  #list로 반환됨.
     
     
+# 220628 다음날 코드 수정
+def solution(lottos, win_nums):
+    
+    rank = [6,6,5,4,3,2,1] #맞은게 하나도 없을 경우에도 6순위이므로 index=0에 6을 넣어줘야 함.
+    correctCount = 0 
+    zeroCount = lottos.count(0) #count 0 in List lottos
+    
+    for i in win_nums : 
+        if i in lottos : 
+            correctCount += 1
+    
+    return rank[correctCount + zeroCount] ,  rank[correctCount]
+    
+            
+    
+    
     
 # -------------------------------------------
 # 간단한 코드 
