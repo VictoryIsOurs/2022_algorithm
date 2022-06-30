@@ -24,7 +24,7 @@ def solution(array, commands):
         answer.append(num)
         
     return answer
-  
+   
 
 #알아야 할 개념
 #파이썬 - list sclice 개념!
